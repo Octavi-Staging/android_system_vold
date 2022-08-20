@@ -150,7 +150,7 @@ bool Keystore::generateKey(const km::AuthorizationSet& inParams, std::string* ke
     return true;
 }
 
-km::ErrorCode Keymaster::exportKey(const KeyBuffer& kmKey, std::string* key) {
+km::ErrorCode Keystore::exportKey(const KeyBuffer& ksKey, std::string* key) {
     km::ErrorCode ret = km::ErrorCode::UNKNOWN_ERROR;
     ks2::KeyDescriptor storageKey = {
             .domain = ks2::Domain::BLOB,
